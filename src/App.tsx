@@ -224,7 +224,7 @@ function App() {
             >
               <motion.div
                 variants={itemVariants}
-                className="relative overflow-hidden rounded-[2.55rem] border border-white/65 bg-white/40 p-3 shadow-[0_28px_70px_rgba(72,43,53,0.16)] backdrop-blur-xl"
+                className="relative overflow-hidden rounded-[2.55rem] border border-white/65 bg-white/40 p-3 shadow-[0_28px_70px_rgba(72,43,53,0.16)] backdrop-blur-xl flex flex-col gap-3"
               >
                 <div className="relative overflow-hidden rounded-[2.1rem]">
                   <motion.img
@@ -233,25 +233,24 @@ function App() {
                     initial={{ scale: 1.08, y: 14 }}
                     animate={{ scale: 1, y: 0 }}
                     transition={{ duration: 1.05, ease: easeOut }}
-                    className="h-auto w-full max-h-[70svh] object-contain object-center bg-black/5"
+                    className="h-auto w-full object-contain object-center bg-black/5"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,13,17,0.0)_0%,rgba(20,13,17,0.05)_50%,rgba(20,13,17,0.80)_100%)]" />
 
-                  <div className="absolute left-4 top-4 rounded-full border border-white/24 bg-white/14 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-white backdrop-blur-md">
+                  <div className="absolute left-4 top-4 rounded-full border border-white/24 bg-black/20 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-white backdrop-blur-md">
                     💌 pra você
                   </div>
+                </div>
 
-                  <div className="absolute inset-x-4 bottom-3 rounded-[1.85rem] border border-white/14 bg-[rgba(29,18,24,0.28)] p-4 backdrop-blur-xl">
-                    <h1 className="font-display text-[clamp(2.8rem,13vw,4.4rem)] leading-[0.86] tracking-[-0.055em] text-white">
-                      <span className="block">Oi,</span>
-                      <span className="mt-0.5 block italic text-[#f7dbe3]">
-                        camilly ♡
-                      </span>
-                    </h1>
-                    <p className="mt-3 max-w-[24ch] text-[0.93rem] leading-6 text-white/80">
-                      Eu preparei uma coisinha especial pra você. Não demora, prometo. Só segue o roteiro.
-                    </p>
-                  </div>
+                <div className="rounded-[2.1rem] border border-white/14 bg-[rgba(29,18,24,0.85)] p-5 backdrop-blur-xl">
+                  <h1 className="font-display text-[clamp(2.8rem,13vw,4.4rem)] leading-[0.86] tracking-[-0.055em] text-white">
+                    <span className="block">Oi,</span>
+                    <span className="mt-0.5 block italic text-[#f7dbe3]">
+                      camilly ♡
+                    </span>
+                  </h1>
+                  <p className="mt-3 max-w-[24ch] text-[0.93rem] leading-6 text-white/80">
+                    Eu preparei uma coisinha especial pra você. Não demora, prometo. Só segue o roteiro.
+                  </p>
                 </div>
               </motion.div>
 
@@ -286,21 +285,22 @@ function App() {
             >
               <motion.div
                 variants={itemVariants}
-                className="relative overflow-hidden rounded-[2.55rem] border border-white/65 bg-[#22161b] shadow-[0_32px_82px_rgba(67,42,50,0.22)]"
+                className="relative flex flex-col overflow-hidden rounded-[2.55rem] border border-white/65 bg-[#22161b] shadow-[0_32px_82px_rgba(67,42,50,0.22)]"
               >
-                <motion.img
-                  src={camillyImage}
-                  alt="Foto da Camilly"
-                  initial={{ scale: 1.06, y: 10 }}
-                  animate={{ scale: 1, y: 0 }}
-                  transition={{ duration: 1.05, ease: easeOut }}
-                  className="h-auto w-full max-h-[70svh] object-contain object-center bg-[#1a1014]"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,10,13,0.06)_0%,rgba(15,10,13,0.14)_36%,rgba(15,10,13,0.84)_100%)]" />
-                <div className="absolute left-4 top-4 rounded-full border border-white/24 bg-white/14 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white backdrop-blur-md">
-                  camilly 🌙
+                <div className="relative">
+                  <motion.img
+                    src={camillyImage}
+                    alt="Foto da Camilly"
+                    initial={{ scale: 1.06, y: 10 }}
+                    animate={{ scale: 1, y: 0 }}
+                    transition={{ duration: 1.05, ease: easeOut }}
+                    className="h-auto w-full object-contain object-center bg-[#1a1014]"
+                  />
+                  <div className="absolute left-4 top-4 rounded-full border border-white/24 bg-black/20 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white backdrop-blur-md">
+                    camilly 🌙
+                  </div>
                 </div>
-                <div className="absolute inset-x-4 bottom-4 rounded-[1.95rem] border border-white/14 bg-white/10 p-4 text-white backdrop-blur-xl">
+                <div className="p-6 text-white">
                   <p className="font-display text-[2.15rem] leading-[0.88] tracking-[-0.05em]">
                     tenho uma
                     <span className="block italic text-[#f3d7df]">
