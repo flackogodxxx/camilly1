@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/camilly1/',
+  base: './',
   plugins: [react(), tailwindcss()],
 })
