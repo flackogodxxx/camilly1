@@ -15,18 +15,24 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   background: #f5eaee;
   scroll-behavior: smooth;
+  /* Prevent iOS text size adjust on rotation */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100svh;
+  min-height: -webkit-fill-available;
   overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.96), transparent 34%),
     radial-gradient(circle at 10% 20%, rgba(244, 210, 220, 0.70), transparent 32%),
@@ -35,6 +41,8 @@ body {
     linear-gradient(180deg, #fdf4f7 0%, #f8ede5 46%, #f0dde0 100%);
   color: var(--ink);
   font-family: var(--font-body);
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior-y: none;
 }
 
 body::before {
@@ -45,18 +53,34 @@ body::before {
   background-image: radial-gradient(rgba(160, 80, 110, 0.06) 0.6px, transparent 0.6px);
   background-size: 22px 22px;
   opacity: 0.30;
+  z-index: -1;
 }
 
 button {
   font: inherit;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #root {
   min-height: 100svh;
+  min-height: -webkit-fill-available;
 }
 
 ::selection {
   background: rgba(180, 100, 130, 0.20);
   color: #3a2530;
+}
+
+/* Fix iOS input zoom */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+/* Smooth momentum scrolling for iOS */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
 }

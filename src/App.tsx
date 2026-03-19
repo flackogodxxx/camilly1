@@ -1,5 +1,6 @@
 import {
   useEffect,
+  useRef,
   useState,
   type ButtonHTMLAttributes,
   type ReactNode,
@@ -116,6 +117,7 @@ function FloatingHearts() {
 }
 
 function App() {
+  const scrollRef = useRef<HTMLElement>(null)
   const [screen, setScreen] = useState<Screen>('intro')
   const [outsideCooldownEndsAt, setOutsideCooldownEndsAt] = useState<
     number | null
@@ -149,6 +151,12 @@ function App() {
     TIMER_CIRCUMFERENCE - TIMER_CIRCUMFERENCE * Math.max(0, outsideProgress)
   const outsideUnlocked = outsideCountdown === 0
 
+  // Scroll to top whenever the screen changes
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: 0 })
+    window.scrollTo({ top: 0 })
+  }, [screen])
+
   const startOutsideFlow = () => {
     setOutsideCooldownEndsAt(Date.now() + OUTSIDE_COOLDOWN_SECONDS * 1000)
     setOutsideCountdown(OUTSIDE_COOLDOWN_SECONDS)
@@ -162,9 +170,9 @@ function App() {
   }
 
   return (
-    <main className="relative isolate min-h-svh overflow-hidden text-[var(--ink)]">
-      {/* Background */}
-      <div className="pointer-events-none absolute inset-0">
+    <main className="relative isolate min-h-svh text-[var(--ink)]">
+      {/* Background — fixed so it doesn't scroll with content on mobile */}
+      <div className="pointer-events-none fixed inset-0 z-[-1]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.92),_transparent_34%),linear-gradient(180deg,rgba(255,248,250,0.88),rgba(240,224,230,0.96))]" />
         <motion.div
           animate={{ x: [0, 22, 0], y: [0, -12, 0] }}
@@ -195,7 +203,10 @@ function App() {
         />
       </div>
 
-      <section className="relative mx-auto flex min-h-svh w-full max-w-[430px] flex-col px-4 pb-[calc(1.35rem+env(safe-area-inset-bottom))] pt-[calc(0.9rem+env(safe-area-inset-top))]">
+      <section
+        ref={scrollRef}
+        className="relative mx-auto flex min-h-svh w-full max-w-[430px] flex-col overflow-y-auto px-4 pb-[calc(1.35rem+env(safe-area-inset-bottom))] pt-[calc(0.9rem+env(safe-area-inset-top))]"
+      >
         {screen !== 'ok' ? (
           <TopBar currentStep={currentStep} canGoBack={screen !== 'intro'} onBack={goBack} />
         ) : null}
@@ -222,7 +233,7 @@ function App() {
                     initial={{ scale: 1.08, y: 14 }}
                     animate={{ scale: 1, y: 0 }}
                     transition={{ duration: 1.05, ease: easeOut }}
-                    className="h-[72svh] min-h-[30rem] max-h-[42rem] w-full object-cover object-[20%_50%]"
+                    className="h-[58svh] min-h-[20rem] max-h-[34rem] w-full object-cover object-[20%_50%]"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,13,17,0.0)_0%,rgba(20,13,17,0.05)_50%,rgba(20,13,17,0.80)_100%)]" />
 
@@ -283,7 +294,7 @@ function App() {
                   initial={{ scale: 1.06, y: 10 }}
                   animate={{ scale: 1, y: 0 }}
                   transition={{ duration: 1.05, ease: easeOut }}
-                  className="h-[72svh] min-h-[30rem] max-h-[44rem] w-full object-cover object-center"
+                  className="h-[58svh] min-h-[20rem] max-h-[34rem] w-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,10,13,0.06)_0%,rgba(15,10,13,0.14)_36%,rgba(15,10,13,0.84)_100%)]" />
                 <div className="absolute left-4 top-4 rounded-full border border-white/24 bg-white/14 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white backdrop-blur-md">
