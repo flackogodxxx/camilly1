@@ -233,7 +233,7 @@ function App() {
                     initial={{ scale: 1.08, y: 14 }}
                     animate={{ scale: 1, y: 0 }}
                     transition={{ duration: 1.05, ease: easeOut }}
-                    className="h-[58svh] min-h-[20rem] max-h-[34rem] w-full object-cover object-[20%_50%]"
+                    className="h-auto w-full max-h-[70svh] object-contain object-center bg-black/5"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,13,17,0.0)_0%,rgba(20,13,17,0.05)_50%,rgba(20,13,17,0.80)_100%)]" />
 
@@ -294,7 +294,7 @@ function App() {
                   initial={{ scale: 1.06, y: 10 }}
                   animate={{ scale: 1, y: 0 }}
                   transition={{ duration: 1.05, ease: easeOut }}
-                  className="h-[58svh] min-h-[20rem] max-h-[34rem] w-full object-cover object-center"
+                  className="h-auto w-full max-h-[70svh] object-contain object-center bg-[#1a1014]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,10,13,0.06)_0%,rgba(15,10,13,0.14)_36%,rgba(15,10,13,0.84)_100%)]" />
                 <div className="absolute left-4 top-4 rounded-full border border-white/24 bg-white/14 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white backdrop-blur-md">
@@ -529,7 +529,7 @@ function App() {
                     <img
                       src={camillySleepingImage}
                       alt="Foto da Camilly dormindo — o troféu"
-                      className="w-full rounded-[1.7rem] object-cover object-center"
+                      className="h-auto w-full rounded-[1.7rem] object-contain object-center"
                     />
                   </div>
                 </div>
@@ -618,7 +618,7 @@ function App() {
                         <img
                           src={emojiImage}
                           alt="Coração"
-                          className="relative h-40 w-40 object-contain drop-shadow-[0_14px_18px_rgba(160,60,90,0.26)]"
+                          className="relative h-56 w-56 object-contain drop-shadow-[0_14px_18px_rgba(160,60,90,0.26)]"
                         />
                       </motion.div>
                     </div>
