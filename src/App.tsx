@@ -566,8 +566,8 @@ function App() {
                   </h2>
 
                   <p className="mx-auto mt-4 max-w-[22ch] text-[1.02rem] leading-[1.75] text-[#7a5060]">
-                    Essa foi a sua surpresa de hoje. 💌<br />
-                    Espero que tenha colocado um sorriso no seu rosto.
+                    MEGA SURPRESA DE HOJE. 💌<br />
+                    Espero que VOCE se arrependa de me bloquear
                   </p>
 
                   <p className="mx-auto mt-3 max-w-[22ch] text-[0.9rem] leading-relaxed text-[#a08090]">
@@ -678,8 +678,9 @@ function ActionButton({
   light = false,
   ...props
 }: ActionButtonProps) {
+  const MotionButton = motion.button as any
   return (
-    <motion.button
+    <MotionButton
       type="button"
       whileTap={disabled ? undefined : { scale: 0.986 }}
       transition={{ duration: 0.2, ease: easeOut }}
@@ -693,7 +694,7 @@ function ActionButton({
       {...props}
     >
       {children}
-    </motion.button>
+    </MotionButton>
   )
 }
 
@@ -713,9 +714,10 @@ function ChoiceCard({
   onClick,
 }: ChoiceCardProps) {
   const solid = tone === 'solid'
+  const MotionButton = motion.button as any
 
   return (
-    <motion.button
+    <MotionButton
       type="button"
       whileTap={{ scale: 0.986 }}
       transition={{ duration: 0.2, ease: easeOut }}
@@ -754,7 +756,7 @@ function ChoiceCard({
           ›
         </div>
       </div>
-    </motion.button>
+    </MotionButton>
   )
 }
 
