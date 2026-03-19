@@ -1,0 +1,22 @@
+- main [ref=e3]:
+  - generic [ref=e41]:
+    - button "Voltar" [ref=e42]
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: combinado rapido
+          - heading "Entao faz assim." [level=2] [ref=e48]
+        - generic [ref=e49]: "*"
+      - paragraph [ref=e50]: Vai ate la fora, pela parte de tras, e olha pra baixo. Sem correria. Eu quero que voce veja direitinho.
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: "1"
+          - generic [ref=e56]: "2"
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - paragraph [ref=e59]: vai para tras
+            - paragraph [ref=e60]: Sai la fora pelo fundo e para por um segundo.
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: olha para baixo
+            - paragraph [ref=e63]: E so depois toca em continuar para ver o proximo passo.
+      - button "Continuar" [ref=e64]

@@ -1,0 +1,20 @@
+- main [ref=e3]:
+  - generic [ref=e65]:
+    - button "Voltar" [ref=e66]
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: premio especial
+          - heading "ESSE E SEU PREMIO POR DORMIR O DIA TODO" [level=2] [ref=e71]:
+            - text: ESSE E SEU
+            - generic [ref=e72]: PREMIO POR
+            - generic [ref=e73]: DORMIR O DIA TODO
+          - paragraph [ref=e74]: Eu precisava guardar esse registro historico em algum lugar. Agora ele virou trofeu oficial.
+        - generic [ref=e75]:
+          - generic [ref=e76]: zzz
+          - generic [ref=e77]: soneca master
+          - img "Foto da Camilly dormindo" [ref=e80]
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: francamente... merecido
+        - paragraph [ref=e83]: essa aba nasceu so para essa foto.
+        - button "Aceitar premio" [ref=e84]

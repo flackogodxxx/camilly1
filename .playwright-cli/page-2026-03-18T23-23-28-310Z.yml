@@ -1,0 +1,10 @@
+- main [ref=e3]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: so um instante
+    - generic [ref=e7]:
+      - heading "Ola, camilly" [level=1] [ref=e9]:
+        - generic [ref=e10]: Ola,
+        - generic [ref=e11]: camilly
+      - paragraph [ref=e12]: Eu queria te mostrar uma coisinha. Nao demora. E, sinceramente, achei a sua cara.
+      - button "Continuar" [ref=e13]
+    - paragraph [ref=e14]: ta ficando bonito, vai

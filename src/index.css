@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-script: "Parisienne", cursive;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #3a2530;
+  --muted: #8a6e78;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f5eaee;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  overscroll-behavior: none;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.96), transparent 34%),
+    radial-gradient(circle at 10% 20%, rgba(244, 210, 220, 0.70), transparent 32%),
+    radial-gradient(circle at 88% 20%, rgba(248, 222, 212, 0.80), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(210, 170, 190, 0.40), transparent 40%),
+    linear-gradient(180deg, #fdf4f7 0%, #f8ede5 46%, #f0dde0 100%);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(160, 80, 110, 0.06) 0.6px, transparent 0.6px);
+  background-size: 22px 22px;
+  opacity: 0.30;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  background: rgba(180, 100, 130, 0.20);
+  color: #3a2530;
+}

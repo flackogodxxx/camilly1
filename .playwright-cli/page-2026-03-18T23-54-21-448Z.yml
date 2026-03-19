@@ -1,0 +1,13 @@
+- main [ref=e3]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: so um instante
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - img "Foto da Camilly" [ref=e9]
+        - generic [ref=e12]: camilly
+      - heading "Ola, camilly" [level=1] [ref=e14]:
+        - generic [ref=e15]: Ola,
+        - generic [ref=e16]: camilly
+      - paragraph [ref=e17]: Eu queria te mostrar uma coisinha. Nao demora. E, sinceramente, achei a sua cara.
+      - button "Continuar" [ref=e18]
+    - paragraph [ref=e19]: ta ficando bonito, vai

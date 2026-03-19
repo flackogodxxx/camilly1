@@ -1,0 +1,5 @@
+2026/03/18-13:37:12.182 3100 Creating DB C:\Users\Administrator\AppData\Roaming\Codex\Local Storage\leveldb since it was missing.
+2026/03/18-13:37:12.188 3100 Reusing MANIFEST C:\Users\Administrator\AppData\Roaming\Codex\Local Storage\leveldb/MANIFEST-000001
+2026/03/18-19:59:43.005 1290 Level-0 table #5: started
+2026/03/18-19:59:43.014 1290 Level-0 table #5: 15924 bytes OK
+2026/03/18-19:59:43.015 1290 Delete type=0 #3

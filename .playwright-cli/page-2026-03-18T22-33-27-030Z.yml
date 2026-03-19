@@ -1,0 +1,10 @@
+- main [ref=e3]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: para voce
+    - generic [ref=e7]:
+      - heading "Ola, camilly" [level=1] [ref=e9]:
+        - generic [ref=e10]: Ola,
+        - generic [ref=e11]: camilly
+      - paragraph [ref=e12]: Deixei esse comeco mais leve, mais bonito e mais sutil. Quando quiser, toca abaixo para ver a proxima parte.
+      - button "Continuar" [ref=e13]
+    - paragraph [ref=e14]: delicado, mas atual

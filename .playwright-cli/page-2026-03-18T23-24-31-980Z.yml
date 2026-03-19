@@ -1,0 +1,26 @@
+- main [ref=e3]:
+  - generic [ref=e15]:
+    - button "Voltar" [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - img "Foto da Camilly" [ref=e19]
+        - generic [ref=e22]: camilly
+        - generic [ref=e23]:
+          - paragraph [ref=e24]: me veio uma pergunta
+          - paragraph [ref=e25]: Entao vou fazer sem enrolar.
+      - generic [ref=e26]:
+        - paragraph [ref=e27]: responde rapidinho
+        - heading "VOCE FOI PARA FACULDADE HOJE?" [level=2] [ref=e28]
+        - generic [ref=e29]:
+          - button "NAO FUI Hoje nao rolou. +" [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]:
+                - generic [ref=e33]: NAO FUI
+                - generic [ref=e34]: Hoje nao rolou.
+              - generic [ref=e35]: +
+          - button "FUI Fui, sim. Presenca moral e fisica. +" [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - generic [ref=e39]: FUI
+                - generic [ref=e40]: Fui, sim. Presenca moral e fisica.
+              - generic [ref=e41]: +
